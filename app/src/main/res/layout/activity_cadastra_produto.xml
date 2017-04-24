@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fernando.appprova.CadastraProduto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Cadastro de Produto"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Produto:"/>
+
+        <EditText
+            android:id="@+id/pd_edit_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Embalagem do Produto:"/>
+
+        <!-- COmentario
+        -->
+
+        <Spinner
+            android:id="@+id/pd_spinner_embalagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:id="@+id/pd_ck_deposito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Depósito" />
+
+                    <CheckBox
+                        android:id="@+id/pd_ck_balcao1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balcão 1" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:id="@+id/pd_ck_balcao2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balcão 2" />
+
+                    <CheckBox
+                        android:id="@+id/pd_ck_prateleira1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prateleira 1" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:id="@+id/pd_ck_showroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show Room" />
+
+                    <CheckBox
+                        android:id="@+id/pd_ck_prateleira2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prateleira 2" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:text="Preço de Custo:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/pd_edit_preco_custo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Preço de Venda:"
+            android:inputType="numberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/pd_edit_preco_venda"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"/>
+
+
+        <TextView
+            android:text="Categoria: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <RadioButton
+                        android:id="@+id/pd_rd_alimenticio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Alimentício" />
+
+                    <RadioButton
+                        android:id="@+id/pd_rd_plastico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plástico" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <RadioButton
+                        android:id="@+id/pd_rd_limpeza"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Limpeza" />
+
+                    <RadioButton
+                        android:id="@+id/pd_rd_panificacao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Panificação" />
+                </TableRow>
+
+            </TableLayout>
+
+        </RadioGroup>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:id="@+id/pd_bt_limpartudo"
+                android:text="Limpar Tudo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/pd_bt_cadastrar"
+                android:text="Cadastrar Produto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </GridLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
