@@ -17,6 +17,10 @@ public class Produto {
     private double precoVenda;
     private ArrayList<String> categoria;
 
+    public Produto() {
+        super();
+    }
+
     public Produto(String nomeProduto, ArrayList<String> localizacaoTipo, String embalagem, double precoCusto, double precoVenda, ArrayList<String> categoria) {
         this.nomeProduto = nomeProduto;
         this.localizacaoTipo = localizacaoTipo;

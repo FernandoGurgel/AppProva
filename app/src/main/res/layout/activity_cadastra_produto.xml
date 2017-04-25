@@ -39,13 +39,10 @@
         <Spinner
             android:id="@+id/pd_spinner_embalagem"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableLayout
+        <TableLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -108,7 +105,6 @@
                     android:layout_height="match_parent" />
             </TableLayout>
 
-        </RadioGroup>
 
 
         <TextView
@@ -142,50 +138,35 @@
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
-            <TableLayout
+            <RadioButton
+                android:id="@+id/pd_rd_alimenticio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Alimentício" />
 
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <RadioButton
 
-                <TableRow
+                android:id="@+id/pd_rd_plastico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plástico" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+            <RadioButton
+                android:id="@+id/pd_rd_panificacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panificação" />
 
-                    <RadioButton
-                        android:id="@+id/pd_rd_alimenticio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:text="Alimentício" />
+            <RadioButton
+                android:id="@+id/pd_rd_limpeza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpeza" />
 
-                    <RadioButton
-                        android:id="@+id/pd_rd_plastico"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Plástico" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <RadioButton
-                        android:id="@+id/pd_rd_limpeza"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Limpeza" />
-
-                    <RadioButton
-                        android:id="@+id/pd_rd_panificacao"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Panificação" />
-                </TableRow>
-
-            </TableLayout>
 
         </RadioGroup>
 
@@ -193,11 +174,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
+
             <Button
                 android:id="@+id/pd_bt_limpartudo"
-                android:text="Limpar Tudo"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:onClick="limpaFormulario"
+                android:text="Limpar Tudo" />
             <Button
                 android:id="@+id/pd_bt_cadastrar"
                 android:text="Cadastrar Produto"
